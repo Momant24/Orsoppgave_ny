@@ -1,0 +1,41 @@
+#navntabell {
+    border: 1px solid #000;
+    & td, th {
+        border: 1px solid #000;
+    }
+    border-collapse: collapse;
+}
+#bilde img{
+    width: 13vw;
+    height: 20vh;
+}
+.venstreside{
+width: 50%;
+  
+
+}
+.høyreside{
+    display: flex;
+    flex-direction: column;
+    display: wrap;
+    align-items: center;
+    width: 50%;
+    height: 100%
+
+}
+.halveskjermen{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+.bilde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: wrap;
+}
+.eninputtalt{
+    display: flex;
+    flex-direction: column;
+}

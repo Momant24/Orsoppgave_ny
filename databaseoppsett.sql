@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS eksamenting;
+
+USE eksamenting;
+
+
+CREATE TABLE IF NOT EXISTS navn (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    navn VARCHAR(255) NOT NULL
+);

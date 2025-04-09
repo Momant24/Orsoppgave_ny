@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="halveskjermen">
+        <div class="Venstreside">
+            
+            
+            
+            <!-- Her er alle knappene som putter ting inn på skjermen -->
+            <div class="eninputtalt">
+                <label for="overskriftinn">Overskrift</label>
+                <div>
+                    <input type="text" placeholder="Legg til overskrift" id="overskriftinn">
+                    <button id="leggtiloverskrift">Legg til</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            
+            <div class="eninputtalt">
+                <label for="fargeinn">Farge bakgrunn</label>
+                <div>
+                    <input type="text" placeholder="Farge bakgrunnen" id="fargeinn">
+                    <button id="bytterfarge">Legg til</button>
+                </div>
+            </div>
+            <br>
+            <div class="eninputtalt">
+                <label for="tekstinn">Tekst til siden</label>
+                <div>
+                    <input type="text" placeholder="Skriv tekst som du vil ha på siden" id="tekstinn">
+                    <button id="leggetiltekst">Legg til</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button id="flytttekstenhøyre">flytt teksten +</button>
+            <button id="flytttekstenvenstre">flytt teksten -</button>
+            <br>
+            <br>
+            <div class="eninputtalt">
+                <label for="tekstfarge">Endre farge på teksten</label>
+                <div>
+                    <input type="text" placeholder="Endre fargen på teksten" id="tekstfarge">
+                    <button id="endretekstfarge">Endre</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p>Skriv inn ditt navn</p>
+            <form method="POST">
+                <input type="text" name="navninn">
+                <button type="submit">Send</button>
+            </form>
+            <br>
+            <br>
+            <div class="eninputtalt">
+                <label for="listeinn">Legg til i listen</label>
+                <div>
+                    <input type="text" placeholder="Skriv noe du vil ha i listen din" id="listeinn">
+                    <button id="leggtilliste">Legg til</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button id="leggtilbilde">Legg til bilde</button>
+            
+            <br>
+            
+            
+            
+            <!-- Her er alt som er på venstre side av skjermen og som plaseres inn på skjermen av brukeren -->
+        </div>
+        <div id="høyre" class="høyreside">
+            <h1 id="overskrift"></h1>
+            <p id="fintekst"></p>
+            <table id="navntabell">
+                <thead>
+                    <tr>
+                        <th>Navn</th>
+                        <th>Antall</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for text in navn_liste %}
+                    <tr>
+                        <td>{{ text[0] }}</td>
+                        <td>{{ text[1][0]['COUNT(navn)'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <ul id="minliste">
+            </ul> 
+            <div id="bilde"></div>
+            
+            
+            
+        </div>
+    </div>
+    <h1>Ditt navn</h1>
+
+
+</body>
+<script src='static/javascript.js'></script>
+</html>
