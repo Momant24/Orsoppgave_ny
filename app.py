@@ -3,10 +3,20 @@ from databaseting import db_config, get_db_connection
 
 app = Flask(__name__)
 
-print("✅ Database koblet til!") if get_db_connection() else print("❌ Ingen tilkobling!")
+print("Database koblet til!") if get_db_connection() else print("Ingen tilkobling!")
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
+
+    return render_template('index.html')
+
+    
+@app.route('/faq')
+def faq():
+    return render_template('faq.html') 
+@app.route('/navn', methods=['GET', 'POST'])
+def navnside():
+
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     
@@ -29,21 +39,7 @@ def index():
         navn_liste.append([navnvalg, resultat])
         
 
-    
-    #navn_resultat = cursor.fetchall()
-    #cursor.close()
-    #conn.close()
-
-    #defult_liste = [rad['navn'] for rad in navn_resultat]
-
-
-    
-
-    return render_template('index.html', navn_liste=navn_liste)
-
-    
-    
-
+    return render_template('navn.html', navn_liste=navn_liste)
         
     
 if __name__ == '__main__':

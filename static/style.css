@@ -9,9 +9,9 @@
     width: 13vw;
     height: 20vh;
 }
-.venstreside{
+.Venstreside{
 width: 50%;
-  
+border: #000 solid 1.5px;
 
 }
 .høyreside{
@@ -20,7 +20,9 @@ width: 50%;
     display: wrap;
     align-items: center;
     width: 50%;
-    height: 100%
+    height: 100%;
+    border: #000 solid 1.5px;
+
 
 }
 .halveskjermen{
@@ -28,6 +30,7 @@ width: 50%;
     justify-content: space-between;
     width: 100%;
     height: 100vh;
+
 }
 .bilde{
     display: flex;
@@ -38,4 +41,8 @@ width: 50%;
 .eninputtalt{
     display: flex;
     flex-direction: column;
+}
+#Overskirft{
+    display: flex;
+    justify-content: center;
 }

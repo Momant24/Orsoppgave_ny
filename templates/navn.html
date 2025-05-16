@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navn side</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <a href="/">Hjem</a>
+    <a href="/faq">Ofte stilte spørsmål</a>
+    <a href="/navn">Side med navn</a>
+    <h1>Navn side</h1>
+    <p>Her kan du skrive inn navnet ditt:</p>
+    <p>Skriv inn ditt navn</p>
+    <form method="POST">
+        <input type="text" name="navninn">
+        <button type="submit">Send</button>
+    </form>
+    
+    <table id="navntabell">
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Antall</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for text in navn_liste %}
+            <tr>
+                <td>{{ text[0] }}</td>
+                <td>{{ text[1][0]['COUNT(navn)'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+</body>
+<script src='static/javascript.js'></script>
+</html>

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <a href="/">Hjem</a>
+    <a href="/faq">Ofte stilte spørsmål</a>
+    <a href="/navn">Side med navn</a>
+    <h2 id="Overskirft">På venstre side har du alle knappene og kontrollene for å endre på høyre side</h2>
     <div class="halveskjermen">
         <div class="Venstreside">
             
@@ -53,11 +57,7 @@
             </div>
             <br>
             <br>
-            <p>Skriv inn ditt navn</p>
-            <form method="POST">
-                <input type="text" name="navninn">
-                <button type="submit">Send</button>
-            </form>
+
             <br>
             <br>
             <div class="eninputtalt">
@@ -80,22 +80,6 @@
         <div id="høyre" class="høyreside">
             <h1 id="overskrift"></h1>
             <p id="fintekst"></p>
-            <table id="navntabell">
-                <thead>
-                    <tr>
-                        <th>Navn</th>
-                        <th>Antall</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for text in navn_liste %}
-                    <tr>
-                        <td>{{ text[0] }}</td>
-                        <td>{{ text[1][0]['COUNT(navn)'] }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
             <ul id="minliste">
             </ul> 
             <div id="bilde"></div>
@@ -104,8 +88,6 @@
             
         </div>
     </div>
-    <h1>Ditt navn</h1>
-
 
 </body>
 <script src='static/javascript.js'></script>
