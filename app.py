@@ -40,7 +40,21 @@ def navnside():
         
 
     return render_template('navn.html', navn_liste=navn_liste)
-        
+@app.route('/kontaktoss', methods=['GET', 'POST'])
+def kontakt():
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+    
+    if request.method == 'POST':
+        kontaktinfo = request.form.get("kontaktinfo")
+        klage = request.form.get("klage")
+        if kontaktinfo:
+            cursor.execute("INSERT INTO meldingtiloss (kontaktinfo, klage) VALUES (%s, %s)", (kontaktinfo, klage))
+            conn.commit()
+
+
+
+    return render_template('/kontaktoss.html')
     
 if __name__ == '__main__':
     app.run(debug=True)
