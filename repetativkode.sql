@@ -11,14 +11,14 @@ CREATE TABLE brukere (
     opprettet_dato DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE meldingtiloss (
+CREATE TABLE produkter (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    kontaktinfo VARCHAR(100),
-    klage VARCHAR(100),
+    Beskrivelse VARCHAR(100),
+    Produkter VARCHAR(100),
     opprettet_dato DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE USER 'ny_bruker'@'localhost' IDENTIFIED BY 'sterkt_passord';
+CREATE USER 'ny_bruker'@'localhost' IDENTIFIED BY 'Hei';
 GRANT SELECT, INSERT, UPDATE ON min_database.* TO 'ny_bruker'@'localhost';
 FLUSH PRIVILEGES;
 
