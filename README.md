@@ -28,7 +28,7 @@ Denne nettsiden er for alle som har lyst til å utforske og prøve å lage en pe
 
 ### Hvordan sette opp siden på egen pc
 1. Du kan først clone hele prosjekte til en mappe.
-2. Du må passe på å instalere flask og alle flask extentione i command promt
+2. Du må passe på å instalere flask og alle flask extentione i command promt: pip install mariadb flask
 3. Du må laste ned [Maria db](https://mariadb.org/download/?t=mariadb&p=mariadb&r=11.7.2&os=windows&cpu=x86_64&pkg=msi&mirror=dotsrc)/ sudo apt install mariadb og opprette databasestrukturen til navn hvis du ønsker den funksjonen med koden fra databasestruktur.sql
 4. Du må også endre koden i databaseseting.py for å matche din database. Foreksempel på du endre brukeren, passordet og om det er localhost eller en ekstern ip.
 
