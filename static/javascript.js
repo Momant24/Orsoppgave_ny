@@ -38,7 +38,7 @@ function leggtiloverskrift() {
     document.getElementById('overskrift').innerText
     = overskrift
 }
-/** endrer teksten sin farge som du la til*/
+/** endrer teksten sin farge som du la til over*/
 function endretekstfarge() {
     var tekstfarge = document.getElementById('tekstfarge').value
     document.getElementById('fintekst').style.color = tekstfarge
